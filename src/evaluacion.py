@@ -72,5 +72,5 @@ class Examen:
                 print("¡Felicidades! Completaste todas las preguntas correctamente.")
                 self._felicitacion_mostrada = True
             else:
-                self._imagen("incorrecto.png", 450)
+                self._imagen("error.png", 450)
                 print(f"Respuestas correctas: {len(self.aciertos)}/{self.total_preguntas}. Completa todas para desbloquear la sorpresa.")
