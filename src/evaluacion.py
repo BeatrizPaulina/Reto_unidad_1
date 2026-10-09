@@ -47,12 +47,13 @@ class Examen:
                     return
                 if opciones.value == pregunta["correcta"]:
                     self.aciertos.add(numero)
-                    self._imagen("correcto.png", 260)
+                    #self._imagen("correcto.png", 260)
                     opciones.disabled = True
                     boton.disabled = True
                     self._actualizar_final()
+                    print("Correcto")
                 else:
-                    self._imagen("incorrecto.png", 260)
+                    #self._imagen("incorrecto.png", 260)
                     print("Inténtalo nuevamente.")
 
         boton.on_click(comprobar)
@@ -71,4 +72,5 @@ class Examen:
                 print("¡Felicidades! Completaste todas las preguntas correctamente.")
                 self._felicitacion_mostrada = True
             else:
+                self._imagen("incorrecto.png", 450)
                 print(f"Respuestas correctas: {len(self.aciertos)}/{self.total_preguntas}. Completa todas para desbloquear la sorpresa.")
